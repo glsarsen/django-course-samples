@@ -1,0 +1,19 @@
+{% extends "base/base.html" %}
+
+
+{% block navigation %}
+    {% include "phone_book/nav.html" %}
+{% endblock navigation %}
+
+
+{% block content %}
+    {% for contact in data %}
+    <div style="padding:20px; border: 1px solid red; border-radius:30px; width: 200px;  ">
+        <p>Name : {{ contact.name }}</p>
+        <p>Lastname : {{ contact.lastname }}</p>
+        <p>Email : {{ contact.email }}</p>
+        <p>Phone : {{ contact.phone }}</p>
+        <p>About : {{ contact.about }}</p>
+    </div>
+    {% endfor %}
+{% endblock content %}

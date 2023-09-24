@@ -1,0 +1,46 @@
+<style>
+    .menu-button {
+        width: 80%;
+        height: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<!-- http://127.0.0.1:8000/ -->
+<!-- http://127.0.0.1:8000/index/ -->
+<a href="{% url 'c_site:index' %}"> 
+    <div class="menu-button">
+        Index
+    </div>
+</a>
+
+<a href="{% url 'c_site:news' %}">
+    <div class="menu-button">
+        News
+    </div>
+</a>
+
+<a href="{% url 'c_site:management' %}">
+    <div class="menu-button">
+        Management
+    </div>
+</a>
+
+<a href="{% url 'c_site:contacts' %}">
+    <div class="menu-button">
+        Contacts
+    </div>
+</a>
+
+<a href="{% url 'c_site:about_page' %}">
+    <div class="menu-button">
+        About
+    </div>
+</a>
+
+<a href="{% url 'c_site:branches' %}">
+    <div class="menu-button">
+        Branches
+    </div>
+</a>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header {
+            border: 1px solid black;
+            height: 40px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 3%;
+        }
+        #left-menu {
+            border: 1px solid black;
+            width: 20%;
+            height: 400px;
+            margin-left: 10%;
+            margin-right: 5%;
+            float: left;
+        }
+        #main-content {
+            border: 1px solid black;
+            margin-left: 35%;
+            margin-right: 10%;
+            height: 400px;
+        }
+        #footer {
+            border: 1px solid black;
+            height: 40px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 3%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header"></header>
+    <aside id="left-menu">
+        {% block nav_menu %}
+        {% endblock nav_menu %}
+    </aside>
+    <article id="main-content">
+        {% block content %}
+        {% endblock content %}
+    </article>
+    <footer id="footer"></footer>
+</body>
+</html>

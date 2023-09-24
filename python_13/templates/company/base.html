@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header, .footer {
+            width: 90%;
+            height: 40px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            margin-left: 5%;
+            border-radius: 10;
+            border: 2px solid black; 
+        }
+
+        .left-menu {
+            width: 20%;
+            float: left;
+            height: 600px;
+            margin-left: 5%;
+            margin-right: 5%;
+            border: 2px solid black; 
+            align-content: center;
+        }
+
+        .content {
+            margin-left: 30%;
+            width: 65%;
+            height: 600px;
+            border: 2px solid black; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="left-menu">
+        {% include 'company/nav-menu.html' %} 
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

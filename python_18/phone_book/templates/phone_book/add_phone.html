@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+
+
+{% block navigation %}
+    {% include "phone_book/nav.html" %}
+{% endblock navigation %}
+
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <input type="submit" value="Add Contact">
+</form>    
+{% endblock content %}

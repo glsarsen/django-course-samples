@@ -1,0 +1,21 @@
+{% extends 'python_15/base.html' %}
+
+{% block title%}
+    {{ title }}
+{% endblock title %}
+
+{% block content %}
+    {% autoescape off %}
+    {{ bodytext }}
+    {% endautoescape %}
+    <p>Page last updated: {{ last_updated|date:'D d F Y' }}</p>
+    <p>Current time: {{ current_time|date:'G i s' }}</p>
+{% endblock content %}
+
+{% block navmenu %}
+    <ul>
+    {% for pg in page_list %}
+        <li><a href="{{ pg.permalink }}">{{ pg.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock navmenu %}

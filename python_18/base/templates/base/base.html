@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "base/styles.css" %}">
+</head>
+<body>
+    <div class="header">
+        Phone Book
+    </div>
+    <div class="navigation">
+        {% block navigation %}
+        {% endblock navigation %}
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <div class="footer">
+        &copy; Python gruop P27
+    </div>
+</body>
+</html>
